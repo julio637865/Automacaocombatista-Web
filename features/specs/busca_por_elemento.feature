@@ -20,10 +20,16 @@ E preencho os campos
 |  Formulario | descrição para teste automatizado |
 Então todos os campos são preenchidos com sucesso 
 
-@busca_por_elemento
 Cenario: Validar que seja possivel clicar nos botões 
 Dado que eu acesso o site 
 Quando que eu clico em busca por elementos 
 E clico em botões
 Então eu consigo clicar em todos os botões contidos na tela 
+
+@busca_por_elemento
+Cenario: Validar que seja possivel clicar em Radio e Checkbox
+Dado que eu acesso o site 
+Quando que eu clico em busca por elementos 
+E clico em Radio e Checkbox
+Então eu consigo clicar nos botões  
  

@@ -19,6 +19,7 @@ E preencho as minhas informações
 Então eu realizo o cadastro da conta 
 
 Cenario: visualizar lista de usuarios  
+
 Dado que eu acesso o site de automação 
 Quando eu clico na lista de usuarios 
 Então eu visualizo todas as contas cadastradas

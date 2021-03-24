@@ -9,13 +9,13 @@ Quando('clico em busca por elementos') do
 end
 
 Quando('clico em cada um dos links') do
-  click_on 'Ok 200 - Sucess'                  #click no primeiro link 
-  click_on 'Voltar'                           #click em Voltar
-  click_on 'Erro 400 - Bad Request'           #click no segundo link
-  click_on 'Voltar'                           #click em voltar 
-  click_on 'Erro 404 - Page not found'        #click no terceiro link
-  click_on 'Voltar'                           #click no voltar
-  click_on 'Erro 500 - Internal Server Error' #click no quarto link
+  click_on 'Ok 200 - Sucess'                          #click no primeiro link 
+  click_on 'Voltar'                                   #click em Voltar
+  click_on 'Erro 400 - Bad Request'                   #click no segundo link
+  click_on 'Voltar'                                   #click em voltar 
+  click_on 'Erro 404 - Page not found'                #click no terceiro link
+  click_on 'Voltar'                                   #click no voltar
+  click_on 'Erro 500 - Internal Server Error'         #click no quarto link
 end
 
 Então('sou direcionado ao respecitvo destino de cada um') do
@@ -35,11 +35,11 @@ end
 
 Quando('preencho os campos') do |table|
   register = table.rows_hash
-  find('#first_name').set register [:Nome       ]
-  find('#last_name').set register  [:Ultimo_nome]
-  find('#password').set register   [:Password   ]
-  find('#email').set register      [:Email      ]
-  find('#textarea1').set register  [:Formulario ]
+  find('#first_name').set register [:Nome       ]     #Nome 
+  find('#last_name').set register  [:Ultimo_nome]     #Ultimo nome
+  find('#password').set register   [:Password   ]     #Senha
+  find('#email').set register      [:Email      ]     #Email
+  find('#textarea1').set register  [:Formulario ]     #Preenchimenti de formulario
   click_on 'Voltar'
   sleep 1
 end
@@ -61,4 +61,18 @@ end
 Então('eu consigo clicar em todos os botões contidos na tela') do
   expect(page).to have_content('Você Clicou no Botão!')
   click_on 'Voltar'
+end
+
+#Cenario: Validar que seja possivel clicar em Radio e Checkbox
+Quando('clico em Radio e Checkbox') do
+  visit '/buscaelementos/radioecheckbox'
+  choose('red',   allow_label_click: true)            #clico no RadioBox
+  choose('yellow',allow_label_click: true)            #clico no RadioBox
+  check('purple', allow_label_click: true)            #cico no CheckBox
+  uncheck('black', allow_label_click:true)            #cico no CheckBox  
+end
+
+Então('eu consigo clicar nos botões') do
+  click_on 'Voltar'
+  expect(page).to have_content ('Bem vindo ao Site de Automação do Batista.')
 end
