@@ -2,7 +2,7 @@
 
 Funcionalidade: preenchendo formulario 
 
-@preenchimento_de_formulario
+
 Cenario: cadastro de usuario 
 
 Dado que eu acesso o site de automação 
@@ -18,6 +18,7 @@ E preencho as minhas informações
 |  idade        |          24            |
 Então eu realizo o cadastro da conta 
 
+@preenchimento_de_formulario
 Cenario: visualizar lista de usuarios  
 
 Dado que eu acesso o site de automação 

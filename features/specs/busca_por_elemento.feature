@@ -2,6 +2,7 @@
 
 Funcionalidade: Clicando em link  
 
+@busca_por_elemento
 Cenario: Validar que seja possivel clicar em links
 Dado que eu acesso o site 
 Quando clico em busca por elementos 
@@ -26,7 +27,6 @@ Quando que eu clico em busca por elementos
 E clico em botões
 Então eu consigo clicar em todos os botões contidos na tela 
 
-@busca_por_elemento
 Cenario: Validar que seja possivel clicar em Radio e Checkbox
 Dado que eu acesso o site 
 Quando que eu clico em busca por elementos 

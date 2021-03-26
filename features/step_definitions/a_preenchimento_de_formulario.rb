@@ -1,26 +1,27 @@
 #Cenario: cadastro de usuario 
 Dado('que eu acesso o site de automação') do
+    @preenchimento_de_formulario_Page = Cadastropage.new
     visit '/'
     click_on 'Começar Automação Web'
+    
 end  
 
 Quando('eu clico em criar usuario') do
-    find('a[class="collapsible-header "]').click
+    @preenchimento_de_formulario_Page.clicando_em_formulario.click
     click_on 'Criar Usuários'
 end  
 
 Quando('preencho as minhas informações') do |table|
     register = table.rows_hash
-    find('#user_name').set register       [:nome        ] #Nomde do usuário
-    find('#user_lastname').set register   [:segundo_nome] #Segundo nome do usuário 
-    find('#user_email').set register      [:email       ] #email do usuário 
-    find('#user_address').set register    [:endereço    ] #endereço do usuário
-    find('#user_university').set register [:universidade] #universidade onde estuda 
-    find('#user_profile').set register    [:profissão   ] #profissão do usuário
-    find('#user_gender').set register     [:genero      ] #Sexo do usuário 
-    find('#user_age').set register        [:idade       ] #idade do usuário 
-    find('input[type="submit"]').click
-    sleep 0
+    @preenchimento_de_formulario_Page.nome.set register[:nome]
+    @preenchimento_de_formulario_Page.segundo_nome.set register[:segundo_nome]
+    @preenchimento_de_formulario_Page.email.set register[:email]
+    @preenchimento_de_formulario_Page.endereço.set register[:endereço]
+    @preenchimento_de_formulario_Page.universidade.set register[:universidade]
+    @preenchimento_de_formulario_Page.profissão.set register[:email]
+    @preenchimento_de_formulario_Page.genero.set register[:genero]
+    @preenchimento_de_formulario_Page.idade.set register[:idade] 
+    @preenchimento_de_formulario_Page.botão_clicar.click
 end
 
 Então('eu realizo o cadastro da conta') do
@@ -31,9 +32,8 @@ end
 Quando('eu clico na lista de usuarios') do
     visit '/'
     click_on 'Começar Automação Web'
-    find('a[class="collapsible-header "]').click
+    @preenchimento_de_formulario_Page.clicando_em_formulario.click
     click_on'Lista de Usuários'  
-    sleep 1
 end
 
 Então('eu visualizo todas as contas cadastradas') do
