@@ -1,8 +1,7 @@
 #language: pt
 
 Funcionalidade: Clicando em link  
-
-@busca_por_elemento
+ 
 Cenario: Validar que seja possivel clicar em links
 Dado que eu acesso o site 
 Quando clico em busca por elementos 
@@ -32,4 +31,10 @@ Dado que eu acesso o site
 Quando que eu clico em busca por elementos 
 E clico em Radio e Checkbox
 Então eu consigo clicar nos botões  
- 
+
+@busca_por_elemento
+Cenario: Validar click em dropdown e select
+Dado que eu acesso o site 
+Quando que eu clico em busca por elementos 
+E clico nos botões
+Então eu consigo clico em dropdown e select 

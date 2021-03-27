@@ -1,6 +1,7 @@
 #Cenario: Validar que seja possivel clicar em links
 Dado('que eu acesso o site') do
   visit '/'
+  @busca_por_elemento_Page = Buscaelementospage.new
 end
 
 Quando('clico em busca por elementos') do
@@ -75,4 +76,18 @@ end
 Então('eu consigo clicar nos botões') do
   click_on 'Voltar'
   expect(page).to have_content ('Bem vindo ao Site de Automação do Batista.')
+end
+
+
+
+#Cenario: Validar click em dropdown e select
+Quando('clico nos botões') do
+  visit '/buscaelementos/dropdowneselect'
+  @busca_por_elemento_Page.botão.click
+  @busca_por_elemento_Page.opção_escolhida.click
+  find(".select-dropdown[value='Escolha sua opção']").select_option
+  
+end
+
+Então('eu consigo clico em dropdown e select') do
 end
