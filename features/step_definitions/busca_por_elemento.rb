@@ -83,10 +83,12 @@ end
 #Cenario: Validar click em dropdown e select
 Quando('clico nos botões') do
   visit '/buscaelementos/dropdowneselect'
-  @busca_por_elemento_Page.botão.click
-  @busca_por_elemento_Page.opção_escolhida.click
-  find(".select-dropdown[value='Escolha sua opção']").select_option
-  
+  @busca_por_elemento_Page.mail_Box.click
+  @busca_por_elemento_Page.desenho_favorito.click 
+  @busca_por_elemento_Page.first_name.click 
+  @busca_por_elemento_Page.dragon_ball.click 
+  @busca_por_elemento_Page.escolha_sua_opcao.click 
+  @busca_por_elemento_Page.ronaldinho_gaucho.click 
 end
 
 Então('eu consigo clico em dropdown e select') do
