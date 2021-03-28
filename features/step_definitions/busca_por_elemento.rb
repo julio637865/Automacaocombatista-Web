@@ -89,7 +89,21 @@ Quando('clico nos botões') do
   @busca_por_elemento_Page.dragon_ball.click 
   @busca_por_elemento_Page.escolha_sua_opcao.click 
   @busca_por_elemento_Page.ronaldinho_gaucho.click 
+  @busca_por_elemento_Page.mail_Box.click
+  @busca_por_elemento_Page.pais.click 
+  @busca_por_elemento_Page.brasil.click 
+  @busca_por_elemento_Page.genero.click 
+  page.execute_script "window.scrollBy(0,100)"
+  @busca_por_elemento_Page.homem.click
+  @busca_por_elemento_Page.browser_favorito.click
+  #all('#dropdown')[1].select_option
+
+  #fill_in 'dropdown', with: '1'
+  
+
+  
 end
 
 Então('eu consigo clico em dropdown e select') do
+
 end
