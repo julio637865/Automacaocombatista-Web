@@ -1,7 +1,3 @@
-# Before do
-#   log "tudo aqui ocorre antes do cenario"
-# end
-
 #After do
 #    shot = page.save_screenshot('logs/temp_evidence.png')
 #

@@ -32,9 +32,21 @@ Quando que eu clico em busca por elementos
 E clico em Radio e Checkbox
 Então eu consigo clicar nos botões  
 
-@busca_por_elemento
 Cenario: Validar click em dropdown e select
 Dado que eu acesso o site 
 Quando que eu clico em busca por elementos 
 E clico nos botões
 Então eu consigo clico em dropdown e select 
+
+Cenario: Validar busca por texto 
+Dado que eu acesso o site 
+Quando que eu clico em busca por elementos 
+E clico em buscar por texto 
+Então eu visualizo os textos que busquei 
+
+@busca_por_elemento
+Cenario: interagindo com tebelas 
+Dado que eu acesso o site 
+Quando que eu clico em busca por elementos 
+E clico em uma tabela 
+Então eu visualizo dados dessa tabela 

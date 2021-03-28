@@ -96,14 +96,57 @@ Quando('clico nos botões') do
   page.execute_script "window.scrollBy(0,100)"
   @busca_por_elemento_Page.homem.click
   @busca_por_elemento_Page.browser_favorito.click
-  #all('#dropdown')[1].select_option
-
-  #fill_in 'dropdown', with: '1'
+  select 'Chrome', from: 'dropdown'
   
-
   
 end
 
 Então('eu consigo clico em dropdown e select') do
+  click_on 'Voltar'
+  expect(page).to have_content ('Bem vindo ao Site de Automação do Batista.')
+end
 
+#Cenario: Validar busca por texto 
+Quando('clico em buscar por texto') do
+ visit '/buscaelementos/textos' 
+
+ text 'Debugando com ByeByug.
+ Você já passou pela situação de não estar conseguindo 
+ rodar um comando em testes, por algum motivo de elemento 
+ mapeado errado entre outras situaçōes. E ter que rodar
+ seus testes de novo para ver se conseguiu mapear correto 
+ ou se funcionou o comando que você inseriu?'
+
+ text 'Integração contínua com Codeship
+ Mas primeiro vamos falar o que é a integração contínua? 
+ A integração contínua é uma prática de desenvolvimento 
+ de software de DevOps em que os desenvolvedores, com frequência, 
+ juntam suas alterações de código em um repositório central. Depois 
+ disso, criações e testes são executados. Geralmente, a integração 
+ contínua se refere ao estágio de criação ou integração do processo 
+  de lançamento de software, além de originar um componente de 
+  automação (ex.: uma CI ou serviço de criação) e um componente 
+  cultural (ex.: aprender a integrar com frequência).'
+ 
+end
+
+Então('eu visualizo os textos que busquei') do
+  click_on 'Voltar'
+  expect(page).to have_content ('Bem vindo ao Site de Automação do Batista.')
+end
+
+#Cenario: interagindo com tebelas 
+Quando('clico em uma tabela') do
+  visit '/buscaelementos/table' 
+  text 'Arroz'
+  text '1'
+  text '$2.87'
+  text 'Feijão'
+  text '2'
+  text '$3.76'
+end
+
+Então('eu visualizo dados dessa tabela') do
+  click_on 'Voltar'
+  expect(page).to have_content ('Bem vindo ao Site de Automação do Batista.')
 end
