@@ -131,8 +131,7 @@ Quando('clico em buscar por texto') do
 end
 
 Então('eu visualizo os textos que busquei') do
-  click_on 'Voltar'
-  expect(page).to have_content ('Bem vindo ao Site de Automação do Batista.')
+
 end
 
 #Cenario: interagindo com tebelas 
@@ -143,10 +142,9 @@ Quando('clico em uma tabela') do
   text '$2.87'
   text 'Feijão'
   text '2'
-  text '$3.76'
+  
 end
 
 Então('eu visualizo dados dessa tabela') do
-  click_on 'Voltar'
-  expect(page).to have_content ('Bem vindo ao Site de Automação do Batista.')
+  text '$3.76'
 end

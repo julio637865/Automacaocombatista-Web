@@ -44,9 +44,9 @@ Quando que eu clico em busca por elementos
 E clico em buscar por texto 
 Então eu visualizo os textos que busquei 
 
-@busca_por_elemento
 Cenario: interagindo com tebelas 
 Dado que eu acesso o site 
 Quando que eu clico em busca por elementos 
 E clico em uma tabela 
 Então eu visualizo dados dessa tabela 
+
