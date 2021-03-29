@@ -21,7 +21,6 @@ end
 
 Então('sou direcionado ao respecitvo destino de cada um') do
   expect(page).to have_content('Internal Server Error!!')
-  click_on 'Voltar'
 end
 
 #Cenario: Validar preenchimento em campos de texto

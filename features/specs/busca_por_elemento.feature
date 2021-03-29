@@ -1,13 +1,14 @@
 #language: pt
 
 Funcionalidade: Clicando em link  
- 
+
 Cenario: Validar que seja possivel clicar em links
 Dado que eu acesso o site 
 Quando clico em busca por elementos 
 E clico em cada um dos links 
 Então sou direcionado ao respecitvo destino de cada um 
 
+@buscar_por_elementos
 Cenario: Validar preenchimento em campos de texto
 Dado que eu acesso o site 
 Quando que eu clico em busca por elementos  

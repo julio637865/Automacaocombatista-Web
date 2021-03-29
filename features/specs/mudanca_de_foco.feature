@@ -13,4 +13,4 @@ Cenario: Clicando em botões infra
 Dado que eu acesso o site automação
 Quando eu clico em mudança de foco 
 E clico em botões iframe  
-Então eu consigo clicar nos botões iframe 
+Então eu consigo preencher campos no iframe 

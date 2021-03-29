@@ -30,6 +30,6 @@ Quando('clico em botões iframe') do
     
 end
   
-Então('eu consigo clicar nos botões iframe') do
+Então('eu consigo preencher campos no iframe') do
     expect(page).to have_content 'Trabalhando com Iframe'
 end
