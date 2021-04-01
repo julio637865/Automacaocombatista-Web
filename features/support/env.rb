@@ -13,7 +13,7 @@ Capybara.configure do |config|
     #config.default_driver = :selenium_chrome_headless #roda com o nageador em background
 end
 
-AllureCucumber.configure do |config|
-    config.results_directory = '/logs'
-    config.clean_results_directory = true
-end
+#AllureCucumber.configure do |config|
+#    config.results_directory = '/logs'
+#    config.clean_results_directory = true
+#end

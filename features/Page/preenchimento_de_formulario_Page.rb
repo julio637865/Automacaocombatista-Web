@@ -1,6 +1,6 @@
-class Cadastropage  < SitePrism::Page 
+class Cadastropage < SitePrism::Page 
 
-element :clicando_em_formulario,     'a[class="collapsible-header "]'
+element :clicando_em_formulario,    'a[class="collapsible-header "]'
 element :nome,                      '#user_name'
 element :segundo_nome,              '#user_lastname'
 element :email,                     '#user_email'
