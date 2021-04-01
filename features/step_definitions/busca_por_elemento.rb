@@ -69,7 +69,7 @@ Quando('clico em Radio e Checkbox') do
   choose('red',   allow_label_click: true)            #clico no RadioBox
   choose('yellow',allow_label_click: true)            #clico no RadioBox
   check('purple', allow_label_click: true)            #cico no CheckBox
-  uncheck('black', allow_label_click:true)            #cico no CheckBox  
+  uncheck('white', allow_label_click: true)           #cico no CheckBox  
 end
 
 Então('eu consigo clicar nos botões') do
