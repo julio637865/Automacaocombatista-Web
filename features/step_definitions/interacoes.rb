@@ -6,9 +6,9 @@ Quando('eu clico em Drag And Drop') do
 
 end
 Então('eu cosigo interagir com o elemento Drag And Drop') do
-    @bonco_feio = find('#winston') 
+    @boneco_feio = find('#winston') 
     @caixinha = find('#dropzone')
-    @bonco_feio.drag_to(@caixinha)
+    @boneco_feio.drag_to(@caixinha)
 end
 
 #Cenario: validar que seja possivel interagir com Mouse houver

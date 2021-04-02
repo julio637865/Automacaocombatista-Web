@@ -1,8 +1,8 @@
 #language: pt 
 
-@interacao 
-Funcionalidade: clicando em elementos de interação 
 
+Funcionalidade: clicando em elementos de interação 
+@interacao 
 Cenario: validar que seja possivel interagir com Drag And Drop
 Dado que eu acesso o site de automação 
 Quando eu clico em Drag And Drop

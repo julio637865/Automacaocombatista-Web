@@ -40,12 +40,11 @@ Quando('preencho os campos') do |table|
   find('#password').set register   [:Password   ]     #Senha
   find('#email').set register      [:Email      ]     #Email
   find('#textarea1').set register  [:Formulario ]     #Preenchimenti de formulario
-  click_on 'Voltar'
   sleep 1
 end
 
 Então('todos os campos são preenchidos com sucesso') do
-  expect(page).to have_content('Bem vindo ao Site de Automação do Batista.')
+  expect(page).to have_content 'Inputs'
 end
 
 #Cenario: Validar que seja possivel clicar nos botões
@@ -60,7 +59,6 @@ end
 
 Então('eu consigo clicar em todos os botões contidos na tela') do
   expect(page).to have_content('Você Clicou no Botão!')
-  click_on 'Voltar'
 end
 
 #Cenario: Validar que seja possivel clicar em Radio e Checkbox
@@ -69,12 +67,9 @@ Quando('clico em Radio e Checkbox') do
   choose('red',   allow_label_click: true)            #clico no RadioBox
   choose('yellow',allow_label_click: true)            #clico no RadioBox
   check('purple', allow_label_click: true)            #cico no CheckBox
-  uncheck('white', allow_label_click: true)           #cico no CheckBox  
 end
-
 Então('eu consigo clicar nos botões') do
-  click_on 'Voltar'
-  expect(page).to have_content ('Bem vindo ao Site de Automação do Batista.')
+  uncheck('white', allow_label_click: true)           #cico no CheckBox  
 end
 
 
@@ -96,13 +91,9 @@ Quando('clico nos botões') do
   @busca_por_elemento_Page.homem.click
   @busca_por_elemento_Page.browser_favorito.click
   select 'Chrome', from: 'dropdown'
-  
-  
 end
 
 Então('eu consigo clico em dropdown e select') do
-  click_on 'Voltar'
-  expect(page).to have_content ('Bem vindo ao Site de Automação do Batista.')
 end
 
 #Cenario: Validar busca por texto 
@@ -126,11 +117,9 @@ Quando('clico em buscar por texto') do
   de lançamento de software, além de originar um componente de 
   automação (ex.: uma CI ou serviço de criação) e um componente 
   cultural (ex.: aprender a integrar com frequência).'
- 
 end
 
 Então('eu visualizo os textos que busquei') do
-
 end
 
 #Cenario: interagindo com tebelas 
