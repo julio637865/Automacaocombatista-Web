@@ -1,13 +1,15 @@
 #language: pt
 
-@buscar_por_elementos
+
 Funcionalidade: Clicando em link  
 
+@buscar_por_elementos
 Cenario: Validar que seja possivel clicar em links
 Dado que eu acesso o site 
 Quando clico em busca por elementos 
 E clico em cada um dos links 
 Então sou direcionado ao respecitvo destino de cada um 
+
 
 Cenario: Validar preenchimento em campos de texto
 Dado que eu acesso o site 
@@ -20,6 +22,7 @@ E preencho os campos
 |   Email     | julioteste@gmail.com              |
 |  Formulario | descrição para teste automatizado |
 Então todos os campos são preenchidos com sucesso 
+
 
 Cenario: Validar que seja possivel clicar nos botões 
 Dado que eu acesso o site 

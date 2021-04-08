@@ -1,7 +1,8 @@
 #Cenario: Validar que seja possivel clicar em links
 Dado('que eu acesso o site') do
-  visit '/'
-  @busca_por_elemento_Page = Buscaelementospage.new
+  @acess = Buscaelementospage.new
+  page.windows[0].maximize
+  @acess.load
 end
 
 Quando('clico em busca por elementos') do
@@ -10,13 +11,13 @@ Quando('clico em busca por elementos') do
 end
 
 Quando('clico em cada um dos links') do
-  click_on 'Ok 200 - Sucess'                          #click no primeiro link 
-  click_on 'Voltar'                                   #click em Voltar
-  click_on 'Erro 400 - Bad Request'                   #click no segundo link
-  click_on 'Voltar'                                   #click em voltar 
-  click_on 'Erro 404 - Page not found'                #click no terceiro link
-  click_on 'Voltar'                                   #click no voltar
-  click_on 'Erro 500 - Internal Server Error'         #click no quarto link
+  click_on 'Ok 200 - Sucess'                          #click link 1
+  click_on 'Voltar'                                   
+  click_on 'Erro 400 - Bad Request'                   #click link 2
+  click_on 'Voltar'                                   
+  click_on 'Erro 404 - Page not found'                #click link 3 
+  click_on 'Voltar'                                   
+  click_on 'Erro 500 - Internal Server Error'         #click link 4
 end
 
 Então('sou direcionado ao respecitvo destino de cada um') do
@@ -26,20 +27,20 @@ end
 #Cenario: Validar preenchimento em campos de texto
 Quando('que eu clico em busca por elementos') do
   visit '/'
-  click_on'Começar Automação Web'
-end
+  click_on 'Começar Automação Web'
 
+end
 Quando('clico em Inputs e TextField') do
   visit '/buscaelementos/inputsetextfield'
 end
 
 Quando('preencho os campos') do |table|
   register = table.rows_hash
-  find('#first_name').set register [:Nome       ]     #Nome 
-  find('#last_name').set register  [:Ultimo_nome]     #Ultimo nome
-  find('#password').set register   [:Password   ]     #Senha
-  find('#email').set register      [:Email      ]     #Email
-  find('#textarea1').set register  [:Formulario ]     #Preenchimenti de formulario
+  find('#first_name').set register [:Nome       ]
+  find('#last_name').set  register [:Ultimo_nome]
+  find('#password').set   register [:Password   ]
+  find('#email').set      register [:Email      ] 
+  find('#textarea1').set  register [:Formulario ]
   sleep 1
 end
 
@@ -50,10 +51,10 @@ end
 #Cenario: Validar que seja possivel clicar nos botões
 Quando('clico em botões') do
   visit '/buscaelementos/botoes' 
-  find('a[id="teste"]').click                         #Raised
-  find('i[class="material-icons"]').click             #Floating
-  find('a[onclick="ativaedesativa3()"]').click        #Flat
-  find('button[onclick="ativaedesativa4()"]').click   #Submmit
+  @acess.raised.click
+  @acess.floating.click
+  @acess.flat.click
+  @acess.submmit.click
   text 'Disable'                                      #Disable
 end
 
@@ -72,24 +73,22 @@ Então('eu consigo clicar nos botões') do
   uncheck('white', allow_label_click: true)           #cico no CheckBox  
 end
 
-
-
 #Cenario: Validar click em dropdown e select
 Quando('clico nos botões') do
   visit '/buscaelementos/dropdowneselect'
-  @busca_por_elemento_Page.mail_Box.click
-  @busca_por_elemento_Page.desenho_favorito.click 
-  @busca_por_elemento_Page.first_name.click 
-  @busca_por_elemento_Page.dragon_ball.click 
-  @busca_por_elemento_Page.escolha_sua_opcao.click 
-  @busca_por_elemento_Page.ronaldinho_gaucho.click 
-  @busca_por_elemento_Page.mail_Box.click
-  @busca_por_elemento_Page.pais.click 
-  @busca_por_elemento_Page.brasil.click 
-  @busca_por_elemento_Page.genero.click 
+  @acess.mail_Box.click
+  @acess.desenho_favorito.click 
+  @acess.first_name.click 
+  @acess.dragon_ball.click 
+  @acess.escolha_sua_opcao.click 
+  @acess.ronaldinho_gaucho.click 
+  @acess.mail_Box.click
+  @acess.pais.click 
+  @acess.brasil.click 
+  @acess.genero.click 
   page.execute_script "window.scrollBy(0,100)"
-  @busca_por_elemento_Page.homem.click
-  @busca_por_elemento_Page.browser_favorito.click
+  @acess.homem.click
+  @acess.browser_favorito.click
   select 'Chrome', from: 'dropdown'
 end
 
