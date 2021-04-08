@@ -3,26 +3,24 @@
 
 Funcionalidade: Clicando em link  
 
-@buscar_por_elementos
 Cenario: Validar que seja possivel clicar em links
 Dado que eu acesso o site 
 Quando clico em busca por elementos 
 E clico em cada um dos links 
 Então sou direcionado ao respecitvo destino de cada um 
 
-
+@buscar_por_elementos
 Cenario: Validar preenchimento em campos de texto
 Dado que eu acesso o site 
 Quando que eu clico em busca por elementos  
 E clico em Inputs e TextField
 E preencho os campos 
-|    Nome     | Julio                             |
-| Ultimo_nome | Santos                            |
-|  Password   | 123456789                         |
-|   Email     | julioteste@gmail.com              |
-|  Formulario | descrição para teste automatizado |
+| nome           | Julio                              |
+| ultimo_nome    | Santos                             |
+| password       | 123456789                          |
+| email          | julioteste@gmail.com               |
+| formulario     | descrição para teste automatizado  |
 Então todos os campos são preenchidos com sucesso 
-
 
 Cenario: Validar que seja possivel clicar nos botões 
 Dado que eu acesso o site 

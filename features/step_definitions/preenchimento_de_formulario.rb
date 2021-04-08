@@ -1,27 +1,27 @@
 #Cenario: cadastro de usuario 
 Dado('que eu acesso o site de automação') do
-    @preenchimento_de_formulario_Page = Cadastropage.new
-    visit '/'
+    @access = Cadastropage.new
+    @access.load
     click_on 'Começar Automação Web'
     
 end  
 
 Quando('eu clico em criar usuario') do
-    @preenchimento_de_formulario_Page.clicando_em_formulario.click
+    @access.clicando_em_formulario.click
     click_on 'Criar Usuários'
 end  
 
 Quando('preencho as minhas informações') do |table|
-    register = table.rows_hash
-    @preenchimento_de_formulario_Page.nome.set register[:nome]
-    @preenchimento_de_formulario_Page.segundo_nome.set register[:segundo_nome]
-    @preenchimento_de_formulario_Page.email.set register[:email]
-    @preenchimento_de_formulario_Page.endereço.set register[:endereço]
-    @preenchimento_de_formulario_Page.universidade.set register[:universidade]
-    @preenchimento_de_formulario_Page.profissão.set register[:email]
-    @preenchimento_de_formulario_Page.genero.set register[:genero]
-    @preenchimento_de_formulario_Page.idade.set register[:idade] 
-    @preenchimento_de_formulario_Page.botão_clicar.click
+    value = table.rows_hash
+    @access.nome.set           value [:nome         ]
+    @access.segundo_nome.set   value [:segundo_nome ]
+    @access.email.set          value [:email        ]
+    @access.endereço.set       value [:endereço     ]
+    @access.universidade.set   value [:universidade ]
+    @access.profissão.set      value [:email        ]
+    @access.genero.set         value [:genero       ]
+    @access.idade.set          value [:idade        ] 
+    @access.botão_clicar.click
 end
 
 Então('eu realizo o cadastro da conta') do
@@ -30,9 +30,9 @@ end
 
 #Cenario: visualizar lista de usuarios 
 Quando('eu clico na lista de usuarios') do
-    visit '/'
+    @acess.load
     click_on 'Começar Automação Web'
-    @preenchimento_de_formulario_Page.clicando_em_formulario.click
+    @access.clicando_em_formulario.click
     click_on'Lista de Usuários'  
 end
 

@@ -6,24 +6,25 @@ set_url '/'
 
 #Cenario: Validar preenchimento em campos de texto
 
+set_url '/'
+element :nome,                        '#first_name'
+element :ultimo_nome,                 '#last_name'
+element :password,                    '#password'
+element :email,                       '#email'
+element :formulario,                  '#textarea1'
+
 #Cenario: Validar que seja possivel clicar nos botões
 
-element :raised,   'a[id="teste"]'
-element :floating, 'i[class="material-icons"]'
-element :flat,     'a[onclick="ativaedesativa3()"]'
-element :submmit,  'button[onclick="ativaedesativa4()"]'
-
-
-#Cenario: Validar que seja possivel clicar em Radio e Checkbox
-
-#Cenario: Validar click em dropdown e select
+element :raised,                      'a[id="teste"]'
+element :floating,                    'i[class="material-icons"]'
+element :flat,                        'a[onclick="ativaedesativa3()"]'
+element :submmit,                     'button[onclick="ativaedesativa4()"]'
 
 #Cenario: Validar busca por texto 
  
-
- element :clico_em_automação,        'Começar Automação Web'
- element :mail_Box,                  'a[class="btn dropdown-button"]'   
- element :desenho_favorito,          'a[id="dropdown3"]' 
+ element :clico_em_automação,         'Começar Automação Web'
+ element :mail_Box,                   'a[class="btn dropdown-button"]'   
+ element :desenho_favorito,           'a[id="dropdown3"]' 
  
  element :first_name,        :xpath,  "//div[@class='input-field col s12'][1]"
  element :dragon_ball,       :xpath,  "//div[@class='input-field col s12'][1]//li[3]/span"

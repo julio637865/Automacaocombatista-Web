@@ -2,7 +2,6 @@
 
 Funcionalidade: preenchendo formulario 
 
-
 Cenario: cadastro de usuario 
 
 Dado que eu acesso o site de automação 
