@@ -1,7 +1,7 @@
 #Cenario: Clicando em alert  
 Dado('que eu acesso o site automação') do 
   @acess = Mudancadefocopage.new
-  @acess.load
+  visit '/'
   click_on 'Começar Automação Web'
 end
 

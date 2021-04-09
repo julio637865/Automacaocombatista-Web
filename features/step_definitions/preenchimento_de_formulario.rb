@@ -1,7 +1,7 @@
 #Cenario: cadastro de usuario 
 Dado('que eu acesso o site de automação') do
     @access = Cadastropage.new
-    @access.load
+    visit '/'
     click_on 'Começar Automação Web'
     
 end  
@@ -30,7 +30,7 @@ end
 
 #Cenario: visualizar lista de usuarios 
 Quando('eu clico na lista de usuarios') do
-    @acess.load
+    visit '/'
     click_on 'Começar Automação Web'
     @access.clicando_em_formulario.click
     click_on'Lista de Usuários'  

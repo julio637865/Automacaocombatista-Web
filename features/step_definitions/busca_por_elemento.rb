@@ -26,7 +26,7 @@ end
 
 #Cenario: Validar preenchimento em campos de texto
 Quando('que eu clico em busca por elementos') do
-  @access.load
+  visit '/'
   click_on 'Começar Automação Web'
 end
 
