@@ -3,13 +3,13 @@
 @mudanca_de_foco
 Funcionalidade: Mudança de foco 
 
-Cenario: Clicando em alert  
+Cenario: Clicando em Alert  
 Dado que eu acesso o site automação
 Quando eu clico em mudança de foco  
 E clico em algum botão 
 Então eu consigo clicar nos botões da tela 
 
-Cenario: Clicando em botões infra 
+Cenario: Clicando em botões Iframe 
 Dado que eu acesso o site automação
 Quando eu clico em mudança de foco 
 E clico em botões iframe  
