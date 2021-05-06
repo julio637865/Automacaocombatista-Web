@@ -41,7 +41,6 @@ Quando('preencho os campos') do |table|
   @access.password.set      value[:password    ]
   @access.email.set         value[:email       ]
   @access.formulario.set    value[:formulario  ]
-  sleep 1
 end
 
 Então('todos os campos são preenchidos com sucesso') do
