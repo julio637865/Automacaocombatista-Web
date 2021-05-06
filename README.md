@@ -1,10 +1,11 @@
-
 # Dependências para rodar os Testes 
 
 - Ruby
 - Bundler 
 
+Instalar a última versão do Ruby
 acesse url: https://rubyinstaller.org/downloads/
+Instalar só ir clicando em enter 
 
 É importante ter o bundler na maquina para instalar as Gems do projeto, 
 para instalar o bundler basta rodar o comando a baixo. 
