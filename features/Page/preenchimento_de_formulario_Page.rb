@@ -1,11 +1,6 @@
 class Cadastropage < SitePrism::Page 
 
-#Cenario: cadastro de usuario 
-
 set_url '/'
-
-#Cenario: visualizar lista de usuarios 
-
 element :clicando_em_formulario,    'a[class="collapsible-header "]'
 element :nome,                      '#user_name'
 element :segundo_nome,              '#user_lastname'
